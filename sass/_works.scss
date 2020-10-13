@@ -1,0 +1,142 @@
+.works {
+    .works__inner {
+        padding: 90px 0;
+        margin: 0 5%;
+        text-align: center;
+        .works__comment {
+            margin-bottom: 100px;
+            p {
+                font-size: 1.8rem;
+                line-height: 1.8;
+                &:nth-child(1) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .works__info {
+            .works__info__item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:not(:last-child) {
+                    margin-bottom: 100px;
+                }
+                @include tab {
+                    flex-direction: column;
+                }
+            
+                .works__info__image {
+                    flex-basis: 45%;
+                    display: block;
+                    @include tab {
+                        margin-bottom: 50px;
+                    }
+                    a {
+                        display: inline-block;
+                        transition: all .2s ease-in-out;
+                        &:hover {
+                            transform: scale(1.05);
+                            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+                            box-shadow: 1px 1px 12px rgba(0,0,0,.65);
+                        }
+                    }
+                }
+                .works__info__image__first {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        z-index: 9999;
+                        top: 0;
+                        left: -15px;
+                        content: "01";
+                        font-size: 6.4rem;
+                        font-family: 'Montserrat';
+                        font-weight: bold;
+                        color: #E24D0A;
+                    }
+                }
+                .works__info__image__second {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        z-index: 9999;
+                        top: 0;
+                        left: -15px;
+                        content: "02";
+                        font-size: 6.4rem;
+                        font-family: 'Montserrat';
+                        font-weight: bold;
+                        color: #E24D0A;
+                    }
+                }
+                .works__info__table {
+                    flex-basis: 50%;
+                    width: 100%;
+                    font-size: 1.4rem;
+                    .last__tr {
+                        td {
+                            @include sp {
+                                border-bottom: 1px solid #ccc;
+                                width: 100%;
+                            }
+                        }
+                    }
+                    th {
+                        background-color: #efefef;
+                        width: 20%;
+                        vertical-align: middle;
+                        @include sp {
+                            padding: 10px;
+                        }
+                    }
+                    td {
+                        padding: 10px 20px;
+                        line-height: 1.8;
+                        text-align: left;
+                        @include sp {
+                            padding: 20px;
+                        }
+                        a {
+                            text-decoration: underline;
+                            color: #E24D0A;
+                        }
+                    }
+                    th,td {
+                        @include sp {
+                            border-bottom: none;
+                            display: block;
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// jsアニメーション
+.works__info__item {
+    transform: translateY(20px);
+    transition-duration: .7s;
+}
+
+.works__info__item .is-show {
+    transform: translateY(0);
+}
+
+.is-show.works__info__item:nth-child(1) {
+    transition-delay: .3s;
+}
+
+.is-show.works__info__item:nth-child(2) {
+    transition-delay: .6s;
+}
+// jsアニメーション
+
+
+
+
+
+
+
+

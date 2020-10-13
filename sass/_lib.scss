@@ -1,0 +1,82 @@
+@mixin pc {
+    @media screen and (min-width: 1200px){
+        @content;
+    }
+}
+@mixin tab {
+    @media screen and (max-width: 1199px){
+        @content;
+    }
+}
+@mixin sp {
+    @media screen and (max-width: 600px){
+        @content;
+    }
+}
+// ◎共通
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
+    color: #3f3b3a;
+}
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 100px;
+    @include sp {
+        flex-direction: column;
+    }
+    h2 {
+        letter-spacing: 0.1em;
+        font-size: 6rem;
+        margin-right: 20px;
+        @include sp {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+    }
+    p {
+        position: relative;
+        font-size: 1.8rem;
+        padding-left: 90px;
+        letter-spacing: 0.1em;
+        &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 70px;
+            height: 1px;
+            background: #3f3b3a;
+        }
+    }
+}
+
+// jsアニメーション
+.js-animation {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 2s, transform 2s,;
+}
+
+.js-animation.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+// jsアニメーション

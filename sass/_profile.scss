@@ -1,0 +1,67 @@
+.profile {
+    .profile__inner {
+        padding: 90px 0;
+        margin: 0 5%;
+        .profile__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include tab {
+                flex-direction: column;
+            }
+            .profile__info__image {
+                flex-basis: 48%;
+                @include tab {
+                    margin-bottom: 50px;
+                }
+                img {
+                    max-width: 100%;
+                }
+            }
+            .profile__info__text {
+                flex-basis: 48%;
+                .profile__text__ul {
+                    li {
+                        font-size: 1.8rem;
+                        line-height: 1.8;
+                        &:not(:last-child) {
+                            margin-bottom: 35px;
+                        }
+                        a {
+                            text-decoration: underline;
+                            color: #E24D0A;
+                        }
+                    }
+                }
+                .profile__info__snslink {
+                    margin-top: 20px;
+                    ul {
+                        display: flex;
+                        justify-content: center;
+                        li {
+                            &:not(:first-child) {
+                                margin-left: 30px;
+                            }
+                            a {
+                                display: block;
+                                font-size: 1.8rem;
+                                background-color: #3f3b3a;
+                                color: #fff;
+                                height: 50px;
+                                width: 50px;
+                                line-height: 50px;
+                                text-align: center;
+                                border-radius: 50%;
+                                &:hover {
+                                    color: #ccc;
+                                    opacity: 0.6;
+                                    transition: all 0.5s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

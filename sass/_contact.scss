@@ -1,0 +1,43 @@
+.contact {
+    background-color: #efefef;
+    .contact__inner {
+        padding: 90px 0;
+        margin: 0 5%;
+        .contact__info {
+            text-align: center;
+            p {
+                font-size: 1.8rem;
+                line-height: 1.8;
+                padding-bottom: 30px;
+                @include sp {
+                    font-size: 1.6rem;
+                }
+            }
+            .contact__form {
+                display: flex;
+                justify-content: center;
+                .contact__form__link {
+                    &:not(:first-child) {
+                        margin-left: 30px;
+                    }
+                    a {
+                        display: block;
+                        font-size: 1.8rem;
+                        background-color: #3f3b3a;
+                        color: #fff;
+                        height: 50px;
+                        width: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        border-radius: 50%;
+                        &:hover {
+                            color: #ccc;
+                            opacity: 0.6;
+                            transition: all 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.first-v {
+    background: url(../image/first-v/S__25870342_0-min.jpg);
+    height: calc(100vh - 138px);
+    background-size: cover;
+    background-position: center;
+    @include sp {
+        background-image: url(../image/first-v/first-v-min.jpg);
+    }
+    .first-v__scroll {
+        position: absolute;
+        top: 70%;
+        right: 5%;
+        width: 15px;
+        min-width: 15px;
+        margin: 0 auto;
+        @include sp {
+            right: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+        }
+        a {
+            display: inline-block;
+            letter-spacing: normal;
+            font-size: 1.8rem;
+            color: #3f3b3a;
+            writing-mode: vertical-lr;
+            margin: 0 auto;
+            @include sp {
+                color: #fff;
+            }
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                width: 1px;
+                height: 100px;
+                background-color: #3f3b3a;
+                animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+                @include sp {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// scrollアニメーション
+@keyframes sdl {
+    0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+    }
+    50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+    }
+    50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+    }
+    100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+    }
+}

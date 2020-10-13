@@ -1,0 +1,88 @@
+.skill {
+    background: #efefef;
+    .skill__inner {
+        padding: 90px 0;
+        margin: 0 5%;
+        .skill__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .skill__item {
+                box-sizing: border-box;
+                padding: 20px;
+                margin:0 50px 50px 0;
+                border:1px solid #ccc;
+                box-shadow: 2px 2px #ccc;
+                border-radius: 20px;
+                width: calc(33.3% - 100px / 3);
+                text-align: center;
+                @include tab {
+                    margin: 0 20px 20px 0;
+                    width: calc(100% - 20px);
+                    margin-right: 0;
+                    margin-bottom: 50px;
+                }
+                i {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    font-size: 15rem;
+                }
+                h3 {
+                    font-size: 3rem;
+                    padding: 30px 0;
+                    letter-spacing: 0.1em;
+                    @include sp {
+                        font-size: 2rem;
+                    }
+                }
+                .html {
+                    color: #E24D0A;
+                }
+                .css {
+                    color: #3366FF;
+                }
+                .javascript {
+                    color: #FFCC00;
+                }
+                p {
+                    font-size: 1.8rem;
+                    text-align: left;
+                    line-height: 1.8;
+                    min-height: 8em;
+                    @include tab {
+                        text-align: center;
+                    }
+                }
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+}
+
+// jsアニメーション
+.skill__item {
+    transform: translateY(20px);
+    transition-duration: .7s;
+}
+
+.skill__item .is-show {
+    transform: translateY(0);
+}
+
+.is-show.skill__item:nth-child(1) {
+    transition-delay: .3s;
+}
+
+.is-show.skill__item:nth-child(2) {
+    transition-delay: .6s;
+}
+
+.is-show.skill__item:nth-child(3) {
+    transition-delay: .9s;
+}
+// jsアニメーション
